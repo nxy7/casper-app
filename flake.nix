@@ -21,11 +21,10 @@
         in {
           devShells.default = pkgs.mkShell {
             packages = with pkgs; [
-              (rust-bin.selectLatestNightlyWith (toolchain:
-                toolchain.default.override {
-                  extensions = [ "rust-src" ];
-                  targets = [ "wasm32-unknown-unknown" ];
-                }))
+              (rust-bin.nightly."2023-06-15".default.override {
+                extensions = [ "rust-src" ];
+                targets = [ "wasm32-unknown-unknown" ];
+              })
               bun
               go
               cmake
