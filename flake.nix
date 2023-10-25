@@ -27,9 +27,10 @@
                   targets = [ "wasm32-unknown-unknown" ];
                 }))
               bun
+              go
               cmake
               pkg-config
-              # openssl.dev
+              openssl.dev
             ];
           };
         };
