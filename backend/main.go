@@ -13,7 +13,9 @@ func main() {
 	fmt.Println("start")
 	r := chi.NewRouter()
 	r.Use(middleware.Logger)
+
 	makeRoutes(r)
+
 	err := http.ListenAndServe(":3333", r)
 	if err != nil {
 		fmt.Println(err)
