@@ -21,7 +21,7 @@
         in {
           devShells.default = pkgs.mkShell {
             packages = with pkgs; [
-              (rust-bin.nightly."2023-06-15".default.override {
+              (rust-bin.nightly."2023-02-15".default.override {
                 extensions = [ "rust-src" ];
                 targets = [ "wasm32-unknown-unknown" ];
               })
